@@ -10,7 +10,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     image: laravel-app
-    container_name: laravel-api-app
+    container_name: laravel-2021-app
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
@@ -21,7 +21,7 @@ services:
  #Nginx Service
   nginx:
     image: nginx:alpine
-    container_name: laravel-api-nginx
+    container_name: laravel-2021-nginx
     restart: unless-stopped
     ports:
       - 8000:80
@@ -36,14 +36,14 @@ services:
   #Mysl Service
   mysql:
     image: mysql:5.7
-    container_name: laravel-api-mysql
+    container_name: laravel-2021-mysql
     volumes:
       - db_data:/var/lib/mysql
       - ./logs/mysql:/var/log/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=laravel
-      - MYSQL_USER=martin
+      - MYSQL_USER=laravel
       - MYSQL_PASSWORD=password
     ports:
       - 3307:3306
