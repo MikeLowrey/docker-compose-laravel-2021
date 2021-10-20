@@ -50,6 +50,15 @@ services:
     networks:
       - mynetwork
 
+  #MailHog
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: laravel-2021-mailhog
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
+
 networks:
   mynetwork:
     driver: bridge
