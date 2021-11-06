@@ -5,15 +5,7 @@ ARG user
 ARG uid
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev \
-    zip \
-    unzip \
-    vim
+RUN apt-get update && apt-get install -y git curl libpng-dev libonig-dev libxml2-dev zip unzip vim openssh-client nano
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
