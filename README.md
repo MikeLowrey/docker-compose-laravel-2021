@@ -9,7 +9,7 @@ nginx, node (npm), php8, mysql, mailhog
 
 `docker-compose up -d`
 
-If you dont have composer or node on you local machine installed then go inside inside a container and install laravel. you step inside with this command:
+If you don't have `composer` and/or `node` installed on your local machine, you can enter the container and install Laravel inside the container. The same applies to later processes when you need node.  You step inside a container with this command:
 
 `docker exec -it laravel-2021-app bash`
 
@@ -53,3 +53,13 @@ MAIL_FROM_NAME="${APP_NAME}"
 ```
 To check your mails, use your browser. Enter localhost:8025 there.
 
+### How do I change the nginx port from 8000 to any other port?
+You can change the nginx port in the docker-compose.yml file. Currently 8000:80 . For example: 9000:80. 
+
+```
+nginx
+  ...
+  ports:
+    - 9000:80
+  ...
+```
