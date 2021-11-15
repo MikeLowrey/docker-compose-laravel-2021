@@ -13,6 +13,8 @@ If you dont have composer or node on you local machine installed then go inside 
 
 `docker exec -it laravel-2021-app bash`
 
+`mkdir application`
+
 `cd application`
 
 `composer create-project laravel/laravel .`
