@@ -9,6 +9,8 @@ nginx, node (npm), php8, mysql, mailhog
 
 `docker-compose up -d`
 
+If you dont have composer or node on you local machine installed then go inside inside a container and install laravel. you step inside with this command:
+
 `docker exec -it laravel-2021-app bash`
 
 `cd application`
