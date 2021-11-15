@@ -3,15 +3,13 @@ nginx, node (npm), php8, mysql, mailhog
 
  
 ## Install Laravel ##
-`git clone https://github.com/MikeLowrey/docker-compose-laravel-2021.git`
+`git clone https://github.com/MikeLowrey/docker-compose-laravel-2021.git` .
 
 `docker-compose build`
 
 `docker-compose up -d`
 
-`docker exec -it laravel-2021-app`
-
-`mkdir application`
+`docker exec -it laravel-2021-app bash`
 
 `cd application`
 
@@ -31,7 +29,7 @@ nginx, node (npm), php8, mysql, mailhog
 
 `npm install`
 
-`npm rund dev`
+`npm run dev`
   
 Check if works with: `php artisan route_list` 
 
