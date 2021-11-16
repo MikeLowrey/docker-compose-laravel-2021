@@ -3,7 +3,7 @@ nginx, node (npm), php8, mysql, mailhog
 
  
 ## Install Laravel ##
-`git clone https://github.com/MikeLowrey/docker-compose-laravel-2021.git` .
+`git clone https://github.com/MikeLowrey/docker-compose-laravel-2021.git .`
 
 `docker-compose build`
 
